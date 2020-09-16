@@ -1,0 +1,15 @@
+# Coronavirus Update
+
+This project is all bout Coronavirus Updates.
+
+## To prevent the spread of COVID-19:
+- Clean your hands often. Use soap and water, or an alcohol-based hand rub.
+- Maintain a safe distance from anyone who is coughing or sneezing.
+- Wear a mask when physical distancing is not possible.
+- Don’t touch your eyes, nose or mouth.
+- Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+- Stay home if you feel unwell.
+- If you have a fever, cough and difficulty breathing, seek medical attention.
+
+### ABOUT ME
+My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
