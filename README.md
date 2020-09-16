@@ -1,6 +1,6 @@
 # Coronavirus Update
 
-This project is all bout Coronavirus Updates.
+This project is all about Coronavirus Updates.
 
 ## To prevent the spread of COVID-19:
 - Clean your hands often. Use soap and water, or an alcohol-based hand rub.
