@@ -24,10 +24,56 @@
 			</div>
 		</div>
 	</header>
-	<main>
-		<div class="wrapper">
-			
-		</div>
+	<main>		
+		<section class="prevent">
+			<div class="wrapper">
+				<h2>To prevent the spread of COVID-19:</h2>
+				<ul class="preventions-ul">
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(1).gif" alt="Clean your hands">
+						</figure>
+						<p>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(17).gif" alt="Clean your hands">
+						</figure>
+						<p>Maintain a safe distance from anyone who is coughing or sneezing.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(6).gif" alt="Clean your hands">
+						</figure>
+						<p>Wear a mask when physical distancing is not possible.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(39).gif" alt="Clean your hands">
+						</figure>
+						<p>Don’t touch your eyes, nose or mouth.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(34).gif" alt="Clean your hands">
+						</figure>
+						<p>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(5).gif" alt="Clean your hands">
+						</figure>
+						<p>Stay home if you feel unwell.</p>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/images/corona-icon(44).gif" alt="Clean your hands">
+						</figure>
+						<p>If you have a fever, cough and difficulty breathing, seek medical attention.</p>
+					</li>					
+				</ul>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<div class="wrapper">
