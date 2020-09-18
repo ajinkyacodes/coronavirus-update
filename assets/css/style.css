@@ -133,3 +133,72 @@ footer {
     color: #fff;
     text-align: center;
 }
+
+/*############################################################################################################
+*   MEDIA QUERIES
+############################################################################################################*/
+
+@media only screen and (max-width: 1200px) {
+    header .header-text h1 { font-size: 40px; }
+    header .header-text p { font-size: 16px; }
+    .prevent .wrapper { width: 70%; }
+
+    .preventions-ul li figure {        
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    }
+
+    .preventions-ul li p {
+        -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    }
+
+    .corona-update h3 { font-size: 28px; }
+}
+
+@media only screen and (max-width: 995px) {
+    .prevent .wrapper { width: 90%; }
+
+    .preventions-ul li figure { margin-right: 5%; }
+
+    .preventions-ul li p {
+        -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    header figure {
+        -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    }
+
+    header .header-text {
+        -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    }
+
+    header .header-text h1 { font-size: 24px; }
+
+    header .header-text p { 
+        width: 80%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    .prevent h2 { font-size: 26px; }
+    .preventions-ul li p { font-size: 18px; }
+
+    .corona-update h3 { font-size: 24px; }
+}
+
+@media only screen and (max-width: 540px) {    
+    header .wrapper { display: block; }
+    header figure { margin-bottom: 0; }
+    header .header-text { padding-bottom: 40px; }
+    .prevent h2 { font-size: 20px; }
+    .preventions-ul li p { font-size: 14px; }
+    .corona-update h3 { font-size: 20px; }
+    table { font-size: 14px; }
+}

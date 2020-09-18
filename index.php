@@ -28,7 +28,7 @@
 	<main>		
 		<section class="prevent">
 			<div class="wrapper">
-				<h2>To prevent the spread of COVID-19:</h2>
+				<h2>To prevent the spread of COVID-19</h2>
 				<ul class="preventions-ul">
 					<li>
 						<figure>
