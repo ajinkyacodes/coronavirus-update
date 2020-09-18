@@ -77,7 +77,7 @@
 	</main>
 	<footer>
 		<div class="wrapper">
-			
+			&copy; ajinkyacodes
 		</div>
 	</footer>
 	<script src="assets/vendor/bootstrap-4.3.1/bootstrap.min.js"></script>
