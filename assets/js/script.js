@@ -18,12 +18,12 @@ function fetch() {
 
                 x.insertCell(2);
                 covidtable.rows[i].cells[2].innerHTML = data['Countries'][i-1]['TotalConfirmed'];
-                covidtable.rows[i].cells[2].style.background = "#f80";
+                covidtable.rows[i].cells[2].style.background = "#ffbe73";
                 covidtable.rows[i].cells[2].style.color = "#000";
                 
                 x.insertCell(3);
                 covidtable.rows[i].cells[3].innerHTML = data['Countries'][i-1]['TotalRecovered'];
-                covidtable.rows[i].cells[3].style.background = "#080";
+                covidtable.rows[i].cells[3].style.background = "#00f700";
                 covidtable.rows[i].cells[3].style.color = "#000";
 
                 //Total Recovery Rate
@@ -36,23 +36,22 @@ function fetch() {
                 } else {
                     covidtable.rows[i].cells[4].innerHTML = tot_recovery_rate.toFixed(2)+"%";
                 }
-                // covidtable.rows[i].cells[4].innerHTML = tot_recovery_rate.toFixed(2)+"%";
                 covidtable.rows[i].cells[4].style.background = "#fff";
                 covidtable.rows[i].cells[4].style.color = "#000";
 
                 x.insertCell(5);
                 covidtable.rows[i].cells[5].innerHTML = data['Countries'][i-1]['TotalDeaths'];
-                covidtable.rows[i].cells[5].style.background = "#f00";
+                covidtable.rows[i].cells[5].style.background = "#ff4343";
                 covidtable.rows[i].cells[5].style.color = "#000";
 
                 x.insertCell(6);
                 covidtable.rows[i].cells[6].innerHTML = data['Countries'][i-1]['NewConfirmed'];
-                covidtable.rows[i].cells[6].style.background = "#ffbe73";
+                covidtable.rows[i].cells[6].style.background = "#f80";
                 covidtable.rows[i].cells[6].style.color = "#000";
 
                 x.insertCell(7);
                 covidtable.rows[i].cells[7].innerHTML = data['Countries'][i-1]['NewRecovered'];
-                covidtable.rows[i].cells[7].style.background = "#00f700";
+                covidtable.rows[i].cells[7].style.background = "#080";
                 covidtable.rows[i].cells[7].style.color = "#000";
 
                 //New Recovery Rate
@@ -70,7 +69,7 @@ function fetch() {
 
                 x.insertCell(9);
                 covidtable.rows[i].cells[9].innerHTML = data['Countries'][i-1]['NewDeaths'];
-                covidtable.rows[i].cells[9].style.background = "#ff4343";
+                covidtable.rows[i].cells[9].style.background = "#f00";
                 covidtable.rows[i].cells[9].style.color = "#000";
             }
         }
