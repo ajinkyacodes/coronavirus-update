@@ -77,7 +77,14 @@
 		</section>
 		<section class="corona-update">
 			<div class="wrapper">
-				<h3>Coronavirus (COVID-19) Worldwide Update</h3>
+				<h3>
+					Coronavirus (COVID-19) Worldwide Update: 
+					<?php 
+						date_default_timezone_set('Asia/Calcutta');
+						$date = date('D, j M Y, h:i A', time());
+						echo $date;						
+					?>
+				</h3>
 				<table class="table corona-update-table table-bordered table-striped text-center" id="covidtable">
 					<tr>
 						<th>ID</th>
