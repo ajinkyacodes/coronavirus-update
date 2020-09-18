@@ -83,9 +83,11 @@
 						<th>Country</th>
 						<th>Total Confirmed</th>
 						<th>Total Recovered</th>
+						<th>Total Recovery Rate</th>
 						<th>Total Deaths</th>
 						<th>New Confirmed</th>
 						<th>New Recovered</th>
+						<th>New Recovery Rate</th>
 						<th>New Deaths</th>
 					</tr>
 				</table>
