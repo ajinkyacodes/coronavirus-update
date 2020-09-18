@@ -79,6 +79,8 @@ header .header-text p {
     text-align: center; 
 }
 
+.preventions-ul { padding-left: 0; }
+
 .preventions-ul li {
     margin-bottom: 30px;
     display: -webkit-box;
