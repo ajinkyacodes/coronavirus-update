@@ -74,6 +74,22 @@
 				</ul>
 			</div>
 		</section>
+		<section class="corona-update">
+			<div class="wrapper">
+				<h3>Coronavirus (COVID-19) Worldwide Update</h3>
+				<table class="table corona-update-table table-bordered table-striped text-center" id="tbval">
+					<tr>
+						<th>Country</th>
+						<th>Total Confirmed</th>
+						<th>Total Recovered</th>
+						<th>Total Deaths</th>
+						<th>New Confirmed</th>
+						<th>New Recovered</th>
+						<th>New Deaths</th>
+					</tr>
+				</table>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<div class="wrapper">
@@ -81,6 +97,7 @@
 		</div>
 	</footer>
 	<script src="assets/vendor/bootstrap-4.3.1/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-3.5.1.min.js"></script>
 	<script src=<?php 
 	$jsfile = "assets/js/script.js";
 	$timestamp = "?".time();
