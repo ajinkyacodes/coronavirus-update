@@ -12,7 +12,7 @@
 	echo $cssfile.$timestamp;
 	?>>
 </head>
-<body>
+<body onload="fetch()">
 	<header>
 		<div class="wrapper">
 			<figure>
@@ -77,8 +77,9 @@
 		<section class="corona-update">
 			<div class="wrapper">
 				<h3>Coronavirus (COVID-19) Worldwide Update</h3>
-				<table class="table corona-update-table table-bordered table-striped text-center" id="tbval">
+				<table class="table corona-update-table table-bordered table-striped text-center" id="covidtable">
 					<tr>
+						<th>ID</th>
 						<th>Country</th>
 						<th>Total Confirmed</th>
 						<th>Total Recovered</th>
@@ -96,12 +97,12 @@
 			&copy; ajinkyacodes
 		</div>
 	</footer>
-	<script src="assets/vendor/bootstrap-4.3.1/bootstrap.min.js"></script>
-	<script src="assets/vendor/jquery-3.5.1.min.js"></script>
-	<script src=<?php 
+	<script type="text/javascript"  src="assets/vendor/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript"  src="assets/vendor/bootstrap-4.3.1/bootstrap.min.js"></script>
+	<script type="text/javascript" src=<?php 
 	$jsfile = "assets/js/script.js";
 	$timestamp = "?".time();
 	echo $jsfile.$timestamp;
-	?>></script>
+	?>></script>	
 </body>
 </html>
