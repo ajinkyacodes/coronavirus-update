@@ -75,7 +75,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="corona-update">
+		<section class="corona-update" id="corona-update">
 			<div class="wrapper">
 				<h3>
 					Coronavirus (COVID-19) Worldwide Update: 
