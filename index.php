@@ -13,7 +13,7 @@
 	echo $cssfile.$timestamp;
 	?>>
 </head>
-<body onload="fetch()">
+<body>
 	<header>
 		<div class="wrapper">
 			<figure>
@@ -78,8 +78,9 @@
 		<?php
 			$covid19_api_data = file_get_contents('https://api.covid19api.com/summary');
 			$cdata = json_decode($covid19_api_data);
-			$cmesssage = $cdata->Message;			
-			if($cmesssage == ""):
+			$cmesssage = $cdata->Message;
+			$total_records = count($cdata->Countries);
+			if(empty($cmessage)):
 		?>
 		<section class="corona-update" id="corona-update">
 			<div class="wrapper">
@@ -104,6 +105,48 @@
 						<th>New Recovery Rate</th>
 						<th>New Deaths</th>
 					</tr>
+					<?php
+						for($i=1; $i<$total_records; $i++) {
+					?>
+					<tr>
+						<td style="background-color:#000; color:#fff;"><?php echo $i; ?></td>
+						<td style="background-color:#777; color:#fff;"><?php echo $cdata->Countries[$i-1]->Country; ?></td>
+						<td style="background-color:#ffbe73; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalConfirmed; ?></td>
+						<td style="background-color:#00f700; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalRecovered; ?></td>
+						<!-- Total Recovery Rate -->
+						<?php
+							$tot_recovered = $cdata->Countries[$i-1]->TotalRecovered;
+							$tot_confirmed = $cdata->Countries[$i-1]->TotalConfirmed;
+							$tot_recovery_rate = @($tot_recovered/$tot_confirmed)*100;
+							if (is_nan($tot_recovery_rate) || (is_finite($tot_recovery_rate)==false)){ ?>									
+								<td style="background-color:#fff; color:#000;">N/A</td>
+							<?php
+							} else { ?>									
+								<td style="background-color:#fff; color:#000;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+							<?php
+							} //End of If
+						?>
+						<td style="background-color:#ff4343; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalDeaths; ?></td>
+						<td style="background-color:#f80; color:#000;"><?php echo $cdata->Countries[$i-1]->NewConfirmed; ?></td>
+						<td style="background-color:#080; color:#000;"><?php echo $cdata->Countries[$i-1]->NewRecovered; ?></td>
+						<!-- New Recovery Rate -->
+						<?php
+							$new_recovered = $cdata->Countries[$i-1]->NewRecovered;
+							$new_confirmed = $cdata->Countries[$i-1]->NewConfirmed;
+							$new_recovery_rate = @($new_recovered/$new_confirmed)*100;
+							if (is_nan($new_recovery_rate) || (is_finite($new_recovery_rate)==false)){ ?>									
+								<td style="background-color:#fff; color:#000;">N/A</td>
+							<?php
+							} else { ?>									
+								<td style="background-color:#fff; color:#000;"><?php echo round($new_recovery_rate,2)."%" ?></td>
+							<?php
+							} //End of If
+						?>
+						<td style="background-color:#f00; color:#000;"><?php echo $cdata->Countries[$i-1]->NewDeaths; ?></td>
+					</tr>
+					<?php
+						} //End of For Loop
+					?>
 				</table>
 			</div>
 		</section>
@@ -122,6 +165,6 @@
 	$jsfile = "assets/js/script.js";
 	$timestamp = "?".time();
 	echo $jsfile.$timestamp;
-	?>></script>	
+	?>></script>
 </body>
 </html>
