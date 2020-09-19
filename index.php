@@ -75,6 +75,12 @@
 				</ul>
 			</div>
 		</section>
+		<?php
+			$covid19_api_data = file_get_contents('https://api.covid19api.com/summary');
+			$cdata = json_decode($covid19_api_data);
+			$cmesssage = $cdata->Message;			
+			if($cmesssage == ""):
+		?>
 		<section class="corona-update" id="corona-update">
 			<div class="wrapper">
 				<h3>
@@ -101,6 +107,9 @@
 				</table>
 			</div>
 		</section>
+		<?php 
+			endif;
+		?>
 	</main>
 	<footer>
 		<div class="wrapper">
