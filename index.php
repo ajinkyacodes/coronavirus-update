@@ -17,7 +17,7 @@
 	<header>
 		<div class="wrapper">
 			<figure>
-				<img src="assets/images/strong-together.png" alt="Strong Together">
+				<img src="assets/images/strong-together.png" alt="Strong Together" draggable="false">
 			</figure>
 			<div class="header-text">
 				<h1>Stay Safe and Stay Strong</h1>
@@ -32,43 +32,43 @@
 				<ul class="preventions-ul">
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(1).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(1).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(17).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(17).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Maintain a safe distance from anyone who is coughing or sneezing.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(6).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(6).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Wear a mask when physical distancing is not possible.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(39).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(39).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Don’t touch your eyes, nose or mouth.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(34).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(34).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(5).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(5).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>Stay home if you feel unwell.</p>
 					</li>
 					<li>
 						<figure>
-							<img src="assets/images/corona-icon(44).gif" alt="Clean your hands">
+							<img src="assets/images/corona-icon(44).gif" alt="Clean your hands" draggable="false">
 						</figure>
 						<p>If you have a fever, cough and difficulty breathing, seek medical attention.</p>
 					</li>					
