@@ -79,14 +79,14 @@
 			$covid19_api_data = file_get_contents('https://api.covid19api.com/summary');
 			$cdata = json_decode($covid19_api_data);
 			$cmesssage = $cdata->Message;
-			$total_records = count($cdata->Countries);
-			if(empty($cmessage)):
+			if(!empty($cmessage)):
 		?>
 		<section class="corona-update" id="corona-update">
 			<div class="wrapper">
 				<h3>
 					Coronavirus (COVID-19) Worldwide Update: 
 					<?php 
+						$total_records = count($cdata->Countries);
 						date_default_timezone_set('Asia/Calcutta');
 						$date = date('D, j M Y, h:i A', time());
 						echo $date;						
@@ -150,7 +150,18 @@
 				</table>
 			</div>
 		</section>
-		<?php 
+		<?php
+			else:
+		?>
+		<section class="corona-update" id="corona-update">
+			<div class="wrapper">
+				<h3>
+					Coronavirus (COVID-19) Worldwide Update: 
+				</h3>
+				<p class="text-center mb-4">COVID-19 data is updating... Please come back after some time.</p>
+			</div>
+		</section>
+		<?php
 			endif;
 		?>
 	</main>
