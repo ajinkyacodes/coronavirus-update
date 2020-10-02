@@ -116,7 +116,8 @@
 						<?php
 							$tot_recovered = $cdata->Countries[$i-1]->TotalRecovered;
 							$tot_confirmed = $cdata->Countries[$i-1]->TotalConfirmed;
-							$tot_recovery_rate = @($tot_recovered/$tot_confirmed)*100;
+							$tot_deaths = $cdata->Countries[$i-1]->TotalDeaths;
+							$tot_recovery_rate = @($tot_recovered/($tot_confirmed-$tot_deaths))*100;
 							if (is_nan($tot_recovery_rate) || (is_finite($tot_recovery_rate)==false)){ ?>									
 								<td style="background-color:#fff; color:#000;">N/A</td>
 							<?php
@@ -132,11 +133,12 @@
 						<?php
 							$new_recovered = $cdata->Countries[$i-1]->NewRecovered;
 							$new_confirmed = $cdata->Countries[$i-1]->NewConfirmed;
-							$new_recovery_rate = @($new_recovered/$new_confirmed)*100;
-							if (is_nan($new_recovery_rate) || (is_finite($new_recovery_rate)==false)){ ?>									
+							$new_deaths = $cdata->Countries[$i-1]->NewDeaths;
+							$new_recovery_rate = @($new_recovered/($new_confirmed-$new_deaths))*100;
+							if (is_nan($new_recovery_rate) || (is_finite($new_recovery_rate)==false)){ ?>				
 								<td style="background-color:#fff; color:#000;">N/A</td>
 							<?php
-							} else { ?>									
+							} else { ?>
 								<td style="background-color:#fff; color:#000;"><?php echo round($new_recovery_rate,2)."%" ?></td>
 							<?php
 							} //End of If
