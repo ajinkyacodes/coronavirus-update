@@ -97,11 +97,11 @@
 						<th>Country</th>
 						<th>Total Confirmed</th>
 						<th>Total Recovered</th>
-						<th>Total Recovery Rate</th>
+						<th>Total Recovery</th>
 						<th>Total Deaths</th>
 						<th>New Confirmed</th>
 						<th>New Recovered</th>
-						<th>New Recovery Rate</th>
+						<th>New Recovery</th>
 						<th>New Deaths</th>
 					</tr>
 					<?php
@@ -121,10 +121,17 @@
 							if (is_nan($tot_recovery_rate) || (is_finite($tot_recovery_rate)==false)){ ?>									
 								<td style="background-color:#fff; color:#000;">N/A</td>
 							<?php
-							} else { ?>									
+							} else { 
+									if($tot_recovery_rate==100) {
+								?>
+									<td style="background-color:#e2ffe0; color:#080; font-weight:700;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+								<?php
+									} else {
+								?>
 								<td style="background-color:#fff; color:#000;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
 							<?php
-							} //End of If
+									} //End If: Recovery rate 100%
+							} //End of If: Nan and Finite
 						?>
 						<td style="background-color:#ff4343; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalDeaths; ?></td>
 						<td style="background-color:#f80; color:#000;"><?php echo $cdata->Countries[$i-1]->NewConfirmed; ?></td>
