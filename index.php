@@ -101,7 +101,6 @@
 						<th>Total Deaths</th>
 						<th>New Confirmed</th>
 						<th>New Recovered</th>
-						<th>New Recovery</th>
 						<th>New Deaths</th>
 					</tr>
 					<?php
@@ -135,21 +134,7 @@
 						?>
 						<td style="background-color:#ff4343; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalDeaths; ?></td>
 						<td style="background-color:#f80; color:#000;"><?php echo $cdata->Countries[$i-1]->NewConfirmed; ?></td>
-						<td style="background-color:#080; color:#000;"><?php echo $cdata->Countries[$i-1]->NewRecovered; ?></td>
-						<!-- New Recovery Rate -->
-						<?php
-							$new_recovered = $cdata->Countries[$i-1]->NewRecovered;
-							$new_confirmed = $cdata->Countries[$i-1]->NewConfirmed;
-							$new_deaths = $cdata->Countries[$i-1]->NewDeaths;
-							$new_recovery_rate = @($new_recovered/($new_confirmed-$new_deaths))*100;
-							if (is_nan($new_recovery_rate) || (is_finite($new_recovery_rate)==false)){ ?>				
-								<td style="background-color:#fff; color:#000;">N/A</td>
-							<?php
-							} else { ?>
-								<td style="background-color:#fff; color:#000;"><?php echo round($new_recovery_rate,2)."%" ?></td>
-							<?php
-							} //End of If
-						?>
+						<td style="background-color:#080; color:#000;"><?php echo $cdata->Countries[$i-1]->NewRecovered; ?></td>						
 						<td style="background-color:#f00; color:#000;"><?php echo $cdata->Countries[$i-1]->NewDeaths; ?></td>
 					</tr>
 					<?php
