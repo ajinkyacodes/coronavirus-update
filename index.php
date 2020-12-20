@@ -91,56 +91,60 @@
 						echo $date;						
 					?>
 				</h3>
-				<table class="table corona-update-table table-bordered table-striped text-center" id="covidtable">
-					<tr>
-						<th>ID</th>
-						<th>Country</th>
-						<th>Total Confirmed</th>
-						<th>Total Recovered</th>
-						<th>Total Recovery</th>
-						<th>Total Deaths</th>
-						<th>New Confirmed</th>
-						<th>New Recovered</th>
-						<th>New Deaths</th>
-					</tr>
-					<?php
-						for($i=1; $i<$total_records; $i++) {
-					?>
-					<tr>
-						<td style="background-color:#000; color:#fff;"><?php echo $i; ?></td>
-						<td style="background-color:#777; color:#fff;"><?php echo $cdata->Countries[$i-1]->Country; ?></td>
-						<td style="background-color:#ffbe73; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalConfirmed; ?></td>
-						<td style="background-color:#00f700; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalRecovered; ?></td>
-						<!-- Total Recovery Rate -->
-						<?php
-							$tot_recovered = $cdata->Countries[$i-1]->TotalRecovered;
-							$tot_confirmed = $cdata->Countries[$i-1]->TotalConfirmed;
-							$tot_deaths = $cdata->Countries[$i-1]->TotalDeaths;
-							$tot_recovery_rate = @($tot_recovered/($tot_confirmed-$tot_deaths))*100;
-							if (is_nan($tot_recovery_rate) || (is_finite($tot_recovery_rate)==false)){ ?>									
-								<td style="background-color:#fff; color:#000;">N/A</td>
+				<div class="card" style="overflow: auto;">                   
+                    <div class="card-body">
+                		<table class="table corona-update-table table-bordered table-striped text-center" id="covidtable">
+							<tr>
+								<th>ID</th>
+								<th>Country</th>
+								<th>Total Confirmed</th>
+								<th>Total Recovered</th>
+								<th>Total Recovery</th>
+								<th>Total Deaths</th>
+								<th>New Confirmed</th>
+								<th>New Recovered</th>
+								<th>New Deaths</th>
+							</tr>
 							<?php
-							} else { 
-									if($tot_recovery_rate==100) {
-								?>
-									<td style="background-color:#e2ffe0; color:#080; font-weight:700;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+								for($i=1; $i<$total_records; $i++) {
+							?>
+							<tr>
+								<td style="background-color:#000; color:#fff;"><?php echo $i; ?></td>
+								<td style="background-color:#777; color:#fff;"><?php echo $cdata->Countries[$i-1]->Country; ?></td>
+								<td style="background-color:#ffbe73; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalConfirmed; ?></td>
+								<td style="background-color:#00f700; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalRecovered; ?></td>
+								<!-- Total Recovery Rate -->
 								<?php
-									} else {
+									$tot_recovered = $cdata->Countries[$i-1]->TotalRecovered;
+									$tot_confirmed = $cdata->Countries[$i-1]->TotalConfirmed;
+									$tot_deaths = $cdata->Countries[$i-1]->TotalDeaths;
+									$tot_recovery_rate = @($tot_recovered/($tot_confirmed-$tot_deaths))*100;
+									if (is_nan($tot_recovery_rate) || (is_finite($tot_recovery_rate)==false)){ ?>									
+										<td style="background-color:#fff; color:#000;">N/A</td>
+									<?php
+									} else { 
+											if($tot_recovery_rate==100) {
+										?>
+											<td style="background-color:#e2ffe0; color:#080; font-weight:700;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+										<?php
+											} else {
+										?>
+										<td style="background-color:#fff; color:#000;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+									<?php
+											} //End If: Recovery rate 100%
+									} //End of If: Nan and Finite
 								?>
-								<td style="background-color:#fff; color:#000;"><?php echo round($tot_recovery_rate,2)."%" ?></td>
+								<td style="background-color:#ff4343; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalDeaths; ?></td>
+								<td style="background-color:#f80; color:#000;"><?php echo $cdata->Countries[$i-1]->NewConfirmed; ?></td>
+								<td style="background-color:#080; color:#000;"><?php echo $cdata->Countries[$i-1]->NewRecovered; ?></td>						
+								<td style="background-color:#f00; color:#000;"><?php echo $cdata->Countries[$i-1]->NewDeaths; ?></td>
+							</tr>
 							<?php
-									} //End If: Recovery rate 100%
-							} //End of If: Nan and Finite
-						?>
-						<td style="background-color:#ff4343; color:#000;"><?php echo $cdata->Countries[$i-1]->TotalDeaths; ?></td>
-						<td style="background-color:#f80; color:#000;"><?php echo $cdata->Countries[$i-1]->NewConfirmed; ?></td>
-						<td style="background-color:#080; color:#000;"><?php echo $cdata->Countries[$i-1]->NewRecovered; ?></td>						
-						<td style="background-color:#f00; color:#000;"><?php echo $cdata->Countries[$i-1]->NewDeaths; ?></td>
-					</tr>
-					<?php
-						} //End of For Loop
-					?>
-				</table>
+								} //End of For Loop
+							?>    	
+						</table>
+                    </div>
+                </div>
 			</div>
 		</section>
 		<?php
