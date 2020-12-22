@@ -76,7 +76,7 @@
 			</div>
 		</section>
 		<?php
-			$covid19_api_data = file_get_contents('https://api.covid19api.com/summary'); //API DATA
+			$covid19_api_data = file_get_contents('http://api.covid19api.com/summary'); //API DATA
 			$cdata = json_decode($covid19_api_data);
 			if(empty($cdata->Message)):
 		?>
