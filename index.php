@@ -88,7 +88,7 @@
 						$total_records = count($cdata->Countries);
 						date_default_timezone_set('Asia/Calcutta');
 						$date = date('D, j M Y, h:i A', time());
-						echo $date;						
+						echo $date.' IST';
 					?>
 				</h3>
 				<div class="card" style="overflow: auto;">                   
