@@ -11,5 +11,8 @@ This project is all about Coronavirus Updates.
 - Stay home if you feel unwell.
 - If you have a fever, cough and difficulty breathing, seek medical attention.
 
+### LIVE UPDATES
+Visit anytime [ajinkyacodes.com/projects/coronavirus-update](https://www.ajinkyacodes.com/projects/coronavirus-update/) for live updates worldwide.
+
 ### ABOUT ME
 My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
