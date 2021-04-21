@@ -11,6 +11,9 @@ This project is all about Coronavirus Updates.
 - Stay home if you feel unwell.
 - If you have a fever, cough and difficulty breathing, seek medical attention.
 
+### MISSION PROTECT EARTH
+Let's make the virus-free world's Total Recovery Rate 100% for a Nobel Cause. #GlobalLeaders #TeamWork #BeautifulEarthRestore 
+
 ### LIVE UPDATES
 Visit anytime [ajinkyacodes.com/projects/coronavirus-update](https://www.ajinkyacodes.com/projects/coronavirus-update/) for live updates worldwide.
 
