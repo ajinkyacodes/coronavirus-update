@@ -17,5 +17,8 @@ Let's make the virus-free world's Total Recovery Rate 100% for a Nobel Cause. #G
 ### LIVE UPDATES
 Visit anytime [ajinkyacodes.com/projects/coronavirus-update](https://www.ajinkyacodes.com/projects/coronavirus-update/) for live updates worldwide.
 
+### HOPE
+Let's hope for a bright future growing old together in a clean environment.
+
 ### ABOUT ME
 My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
