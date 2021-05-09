@@ -20,5 +20,8 @@ Visit anytime [ajinkyacodes.com/projects/coronavirus-update](https://www.ajinkya
 ### HOPE
 Let's hope for a bright future growing old together in a clean environment.
 
+### VISION
+If I had the superpower, I would save that planet first where my family lives! ~ AJINKYA 
+
 ### ABOUT ME
 My name is Ajinkya. I am a Laravel Developer. You can visit my website [ajinkyacodes.com](https://ajinkyacodes.com) for more info.
